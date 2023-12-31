@@ -41,14 +41,19 @@ SHA-256 (Secure Hash Algorithm 256-bit):
 - Kuantum Bilgisayarları: Kuantum bilgisayarları, SHA-256'nın hash fonksiyonlarını çözme potansiyeline sahiptir.
 
 Temel Prensiplerin Belirlenmesi
+
 -Tasarlanacak olan şifreleme algoritmasında simetrik şifreleme kullanılcaktır.
+
 -Algoritmanın özelliklerin şu şekilde olması planlanmaktadır.
+
 Blok Boyutu:
 Kod, blok bazında çalışır. Şifreleme ve şifre çözme işlemleri, metin bloklarını ele alarak gerçekleştirilir. Şifrelenecek olan metin kullanıcıdan alınacaktır.
 Anahtar Boyutu:
 Anahtarın uzunluğu, şifreleme sırasında kullanılan karakter dizisi olan key'e bağlıdır. Bu karakter dizisinin indeksleri üzerinden bir toplama işlemi gerçekleştirilerek sum değeri hesaplanır. Anahtar kelime kullanıcıdan alınacaktır.
+
 Döngü Sayısı:
 Anahtarın uzunluğu kadar bir döngü oluşturularak, her karakterin fullArray içindeki indeksi ile belirli işlemler yapılarak şifreleme gerçekleştirilir.
+
 Şifreleme Mimarisi:
 Şifreleme, her karakterin indeks değeri ve belirli hesaplamalar kullanılarak gerçekleştirilir. Harfin indeks değerine göre, rastgele seçilen bir anahtar değeri ile yapılan işlemlerle şifreleme yapılmaktadır.
 
