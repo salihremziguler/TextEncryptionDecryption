@@ -36,7 +36,7 @@ public class EncDec {
         char[] lowerArray = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         char[] upperArray = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
-        //  System.out.println(fullArray.length);
+        long startTime = System.currentTimeMillis();
 
         String key;
         String word ;
@@ -56,7 +56,7 @@ public class EncDec {
            sum+= indexOf(fullArray,key.charAt(i));
         }
 
-        //sum değerini harf sayısına gore modu alınıyor
+        //sum değerini harf sayısına gore modu alınıyorsa
         int randomNumber2=sum%lowerArray.length;
 
         //maksimum key in uzunluğu kadar olacak şekilde rastgele bir deger belirleniyor
@@ -129,6 +129,23 @@ public class EncDec {
 
         System.out.println("-------Şifrenin Çözülmüş Hali----------: "+result2);
 
+
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+
+        System.out.println("-------Şifrelenmiş Kelime--------------: " + result);
+
+
+        System.out.println("\n\n\n----PERFORMANS ÖLÇÜMLERİ----");
+        System.out.println("Geçen Süre: " + elapsedTime + " milisaniye");
+
+        // Bellek Tüketimi
+        long totalMemory = Runtime.getRuntime().totalMemory();
+        long freeMemory = Runtime.getRuntime().freeMemory();
+        long usedMemory = totalMemory - freeMemory;
+
+        System.out.println("Toplam Bellek: " + totalMemory + " byte");
+        System.out.println("Kullanılan Bellek: " + usedMemory + " byte");
 
 
 
